@@ -11,7 +11,11 @@ import SwiftUI
 struct CountriesChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CountriesListView(
+                viewModel: CountriesViewModel(
+                    service: CountriesAPIService()
+                )
+            )
         }
     }
 }
